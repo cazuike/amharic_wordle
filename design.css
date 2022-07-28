@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  --ogold: #FAD775;
+}
+
+html,body {
+  height: 100%;
+  font-family: sans-serif;
+  background-color: black;
+
+}
+
+#container {
+  display: flex;
+  background-color: black;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+header {
+  border-bottom: 1px solid rgb(58,58,60);
+}
+
+#game {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+
+}
+.title {
+  color: gainsboro;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.4rem 0 0.4rem 0;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#board-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+#board{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.square {
+  border: 2px solid rgb(58,58,60);
+  min-width: 60px;
+  min-height: 60px;
+  color: gainsboro;
+  font-size: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#selector {
+  min-height: 60px;
+  background-color: gray;
+  border: 10px;
+}
+
+#keyboard-container {
+  height: 200px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+
+.keyboard-row button{
+  font-family: inherit;
+  font-weight: bold;
+  border: 0px;
+  padding: 0px;
+  height: 58px;
+  cursor: pointer;
+  background-color: rgb(129,131,132);
+  color: rgb(215,218,220);
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-right: 6px;
+  border-radius: 4px;
+  user-select: none;
+  font-size: 20px;
+}
+
+#ent {
+  background-color: green;
+  font-size: 15px;
+}
+
+#rem {
+  background-color: red;
+  font-size: 15px;
+}
+
+.keyboard-row button.wide-button {
+  flex-grow: 1.5;
+
+}
+
+.keyboard-row button:active {
+  opacity: 0.5;
+}
+
+
+.keyboard-row button:hover{
+  background-color: var(--ogold);
+  color: black;
+}
+
+#selector {
+  background-color: black;
+  height: 10px;
+  width: 100%;
+  border:0px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+
+}
+
+#settings{
+  width: 50px;
+  height: 50px;
+  background-image: url(gear.png);
+  background-size: 100%;
+  background-color: black;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  transition-duration: 2s;
+}
+
+#quest{
+  width: 50px;
+  height: 50px;
+  background-image: url(quest.png);
+  background-size: 100%;
+  background-color: black;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  transition-duration: 2s;
+}
+
+
+#misc button:hover{
+  transform: rotate(0.5turn);
+  transition-duration: 2s;
+}
+#misc {
+  position: absolute;
+  right:20px;
+  top:10px;
+
+}
+
+#selector button{
+  font-family: inherit;
+  font-weight: bold;
+  border: 0px;
+  padding: 0px;
+  height: 56px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: orange;
+  color: rgb(215,218,220);
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+#selector button.is-active{
+  color: green;
+}
+#selector button:active{
+  opacity: 0.5;
+
+}
+
+#selector button:hover{
+  color: black;
+
+}
