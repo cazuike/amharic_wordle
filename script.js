@@ -68,6 +68,9 @@ function updateGuessedWords(letter) {
   }
   function handleDeleteLetter() {
     const currentWordArr = getCurrentWordArr();
+    if (currentWordArr.length === 5) {
+      return
+    }
     const removedLetter = currentWordArr.pop();
 
     guessedWords[guessedWords.length - 1] = currentWordArr;
